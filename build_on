@@ -1,0 +1,55 @@
+Core:
+  Logging: github.com/go-kit/kit/log/
+  Use LogFmt by default
+
+  Endpoint: github.com/go-kit/kit/endpoint/
+  Use to represent basic endpoints, transform from Handler, HandlerFunc
+
+  Rate Limiting: github.com/go-kit/kit/ratelimit/
+  Loadable as a module
+
+Net:
+  HTTP2: github.com/bradfitz/http2
+  Until it rolls into the stdlib
+
+  Websocket: golang.org/x/net/websocket
+  Why not?
+
+  Queue: http://www.grpc.io/
+  Don't try to fight it
+
+Security:
+  github.com/unrolled/secure
+  Middleware for security options, may need to port to go-kit
+
+  github.com/justinas/nosurf
+  Stop CSRF, kind of important
+
+  github.com/gorilla/sessions
+  Signed and encrypted sessions, include sqlite & redis store
+
+Normal HTML/CSS/JS
+  CSS Preprocessor
+  github.com/yosssi/gcss
+
+  HTML Templating
+  github.com/yosssi/ace
+
+  JS Minifier
+  github.com/tdewolff/minify/js
+
+Must Write:
+  Router
+  Needs to support module based routing
+
+  ORM
+  Finish up doc enough to be a default
+
+  API Generator
+  Take raml + JSON Schema, generate code
+
+  URL
+  Module register urls via router, usable in controllers/views
+
+  Hot-reload
+  Watch templates, modules, reload when necessary
